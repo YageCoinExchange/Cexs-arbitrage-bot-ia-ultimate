@@ -1,0 +1,1007 @@
+Manual Completo del Bot - "La Biblia del Bot"
+
+
+# 📚 MANUAL COMPLETO DEL BOT DE ARBITRAJE CEX - "LA BIBLIA DEL BOT"
+
+## 📋 ÍNDICE
+
+1. [Configuración General](#configuración-general)
+2. [Configuración de Exchanges](#configuración-de-exchanges)
+3. [Estrategias de Trading](#estrategias-de-trading)
+4. [Gestión de Riesgos](#gestión-de-riesgos)
+5. [Portfolio y Balances](#portfolio-y-balances)
+6. [Alertas y Notificaciones](#alertas-y-notificaciones)
+7. [Inteligencia Artificial](#inteligencia-artificial)
+8. [Backtesting](#backtesting)
+9. [API Móvil](#api-móvil)
+10. [Dashboard Web](#dashboard-web)
+11. [Logs y Monitoreo](#logs-y-monitoreo)
+12. [Seguridad](#seguridad)
+13. [Troubleshooting](#troubleshooting)
+
+---
+
+## 🔧 CONFIGURACIÓN GENERAL
+
+### Archivo Principal: `/src/strategies/config.js`
+
+```javascript
+// CONFIGURACIÓN BÁSICA DEL BOT
+const config = {
+    // ===== CONFIGURACIÓN GENERAL =====
+    BOT_NAME: "CEX Arbitrage Bot IA",
+    VERSION: "2.0.0",
+    ENVIRONMENT: "production", // "development" | "production" | "testing"
+    
+    // ===== MODO DE OPERACIÓN =====
+    TRADING_MODE: "simulation", // "simulation" | "live"
+    
+    // ===== PARES DE TRADING =====
+    TRADING_PAIRS: [
+        "BTC/USDT",
+        "ETH/USDT", 
+        "XRP/USDT",
+        "ADA/USDT",
+        "DOT/USDT"
+    ],
+    
+    // ===== INTERVALOS DE TIEMPO =====
+    SCAN_INTERVAL: 5000,        // Cada 5 segundos
+    PRICE_UPDATE_INTERVAL: 2000, // Cada 2 segundos
+    BALANCE_CHECK_INTERVAL: 30000, // Cada 30 segundos
+}
+```
+
+### ⚙️ Cómo Modificar la Configuración General
+
+1. **Cambiar Modo de Trading**:
+   ```javascript
+   TRADING_MODE: "live" // Para trading real
+   TRADING_MODE: "simulation" // Para simulación
+   ```
+
+2. **Añadir Nuevos Pares**:
+   ```javascript
+   TRADING_PAIRS: [
+       "BTC/USDT",
+       "ETH/USDT",
+       "MATIC/USDT", // ← Nuevo par
+       "LINK/USDT"   // ← Nuevo par
+   ]
+   ```
+
+3. **Ajustar Velocidad del Bot**:
+   ```javascript
+   SCAN_INTERVAL: 3000, // Más rápido (cada 3 segundos)
+   SCAN_INTERVAL: 10000, // Más lento (cada 10 segundos)
+   ```
+
+---
+
+## 🏦 CONFIGURACIÓN DE EXCHANGES
+
+### Configuración de APIs
+
+```javascript
+EXCHANGES: {
+    BINANCE: {
+        enabled: true,
+        name: "Binance",
+        apiKey: "TU_API_KEY_BINANCE",
+        apiSecret: "TU_API_SECRET_BINANCE",
+        sandbox: false, // true para testnet
+        rateLimit: 1200,
+        fees: {
+            maker: 0.001, // 0.1%
+            taker: 0.001  // 0.1%
+        }
+    },
+    COINBASE: {
+        enabled: true,
+        name: "Coinbase",
+        apiKey: "TU_API_KEY_COINBASE",
+        apiSecret: "TU_API_SECRET_COINBASE",
+        passphrase: "TU_PASSPHRASE_COINBASE",
+        sandbox: false,
+        rateLimit: 10,
+        fees: {
+            maker: 0.005, // 0.5%
+            taker: 0.005  // 0.5%
+        }
+    }
+}
+```
+
+### 🔑 Cómo Configurar APIs de Exchange
+
+1. **Obtener API Keys**:
+   - **Binance**: Spot Trading + Read Info permissions
+   - **Coinbase**: View + Trade permissions
+   - **Kraken**: Query Funds + Create & Modify Orders
+   - **KuCoin**: General + Trade permissions
+
+2. **Configurar Permisos Mínimos**:
+   ```
+   ✅ Leer información de cuenta
+   ✅ Leer balances
+   ✅ Crear órdenes spot
+   ✅ Cancelar órdenes
+   ❌ Retirar fondos (NO necesario)
+   ❌ Transferir a otras cuentas (NO necesario)
+   ```
+
+3. **Habilitar/Deshabilitar Exchanges**:
+   ```javascript
+   BINANCE: {
+       enabled: false, // ← Deshabilitar Binance
+   }
+   ```
+
+### 💰 Gestión de Balances por Exchange
+
+```javascript
+PORTFOLIO: {
+    INITIAL_BALANCE: 10000, // $10,000 USD total
+    TARGET_ALLOCATION: {
+        "Binance": 0.25,    // 25%
+        "Coinbase": 0.25,   // 25%
+        "Kraken": 0.25,     // 25%
+        "Kucoin": 0.25      // 25%
+    },
+    MIN_BALANCE_PER_EXCHANGE: 100, // Mínimo $100 por exchange
+    RESERVE_PERCENTAGE: 0.05 // 5% de reserva
+}
+```
+
+---
+
+## 🎯 ESTRATEGIAS DE TRADING
+
+### Configuración de Estrategias
+
+```javascript
+STRATEGIES: {
+    // ===== ARBITRAJE BÁSICO =====
+    BASIC: {
+        enabled: true,
+        minProfitPercentage: 0.2,     // Mínimo 0.2% ganancia
+        maxInvestmentPercentage: 0.1,  // Máximo 10% del balance
+        maxSlippage: 0.05,            // Máximo 0.05% slippage
+        executionTimeout: 30000       // 30 segundos timeout
+    },
+    
+    // ===== ARBITRAJE TRIANGULAR =====
+    TRIANGULAR: {
+        enabled: true,
+        minProfitPercentage: 0.15,    // Mínimo 0.15% ganancia
+        maxInvestmentPercentage: 0.08, // Máximo 8% del balance
+        intermediateCurrencies: ["ETH", "BNB", "USDC"],
+        maxHops: 3                    // Máximo 3 saltos
+    },
+    
+    // ===== ARBITRAJE ESTADÍSTICO =====
+    STATISTICAL: {
+        enabled: false,               // Deshabilitado por defecto
+        minProfitPercentage: 0.1,
+        lookbackPeriod: 100,          // 100 períodos históricos
+        zScoreThreshold: 2.0,         // Umbral Z-Score
+        meanReversionTime: 3600       // 1 hora
+    },
+    
+    // ===== MACHINE LEARNING =====
+    ML: {
+        enabled: true,
+        minProfitPercentage: 0.25,
+        confidenceThreshold: 0.7,     // 70% confianza mínima
+        modelUpdateFrequency: 86400,  // Actualizar cada 24 horas
+        features: ["price", "volume", "volatility", "spread"]
+    }
+}
+```
+
+### 🎮 Cómo Cambiar Estrategias
+
+1. **Habilitar/Deshabilitar Estrategias**:
+   ```javascript
+   BASIC: {
+       enabled: false, // ← Deshabilitar arbitraje básico
+   }
+   ```
+
+2. **Ajustar Rentabilidad Mínima**:
+   ```javascript
+   BASIC: {
+       minProfitPercentage: 0.5, // ← Aumentar a 0.5% mínimo
+   }
+   ```
+
+3. **Cambiar Tamaño de Inversión**:
+   ```javascript
+   BASIC: {
+       maxInvestmentPercentage: 0.05, // ← Reducir a 5% máximo
+   }
+   ```
+
+---
+
+## ⚠️ GESTIÓN DE RIESGOS
+
+### Configuración de Risk Management
+
+```javascript
+RISK_MANAGEMENT: {
+    // ===== LÍMITES GENERALES =====
+    MAX_DAILY_LOSS: 500,           // Máximo $500 pérdida diaria
+    MAX_DRAWDOWN: 0.1,             // Máximo 10% drawdown
+    MAX_EXPOSURE_PER_PAIR: 0.2,    // Máximo 20% por par
+    MAX_EXPOSURE_PER_EXCHANGE: 0.3, // Máximo 30% por exchange
+    
+    // ===== STOP LOSS =====
+    STOP_LOSS: {
+        enabled: true,
+        percentage: 0.02,           // 2% stop loss
+        trailingStop: true,         // Stop loss dinámico
+        trailingDistance: 0.01      // 1% distancia trailing
+    },
+    
+    // ===== VOLATILIDAD =====
+    VOLATILITY_LIMITS: {
+        maxVolatility: 0.05,        // Máximo 5% volatilidad
+        volatilityWindow: 24,       // Ventana de 24 horas
+        pauseOnHighVolatility: true // Pausar si volatilidad alta
+    },
+    
+    // ===== REBALANCEO =====
+    REBALANCE_THRESHOLD: 0.15,     // Rebalancear si desviación > 15%
+    AUTO_REBALANCE: true,          // Rebalanceo automático
+    REBALANCE_FREQUENCY: 3600000   // Cada hora
+}
+```
+
+### 🛡️ Cómo Ajustar el Risk Management
+
+1. **Cambiar Límites de Pérdida**:
+   ```javascript
+   MAX_DAILY_LOSS: 200,    // ← Reducir a $200
+   MAX_DRAWDOWN: 0.05,     // ← Reducir a 5%
+   ```
+
+2. **Configurar Stop Loss**:
+   ```javascript
+   STOP_LOSS: {
+       enabled: true,
+       percentage: 0.01,    // ← 1% stop loss más estricto
+       trailingStop: false  // ← Deshabilitar trailing stop
+   }
+   ```
+
+3. **Ajustar Límites de Exposición**:
+   ```javascript
+   MAX_EXPOSURE_PER_PAIR: 0.1,     // ← Máximo 10% por par
+   MAX_EXPOSURE_PER_EXCHANGE: 0.2  // ← Máximo 20% por exchange
+   ```
+
+---
+
+## 💼 PORTFOLIO Y BALANCES
+
+### Configuración del Portfolio
+
+```javascript
+PORTFOLIO: {
+    // ===== BALANCE INICIAL =====
+    INITIAL_BALANCE: 10000,        // $10,000 USD
+    
+    // ===== DISTRIBUCIÓN OBJETIVO =====
+    TARGET_ALLOCATION: {
+        "Binance": 0.30,           // 30%
+        "Coinbase": 0.25,          // 25%
+        "Kraken": 0.25,            // 25%
+        "Kucoin": 0.20             // 20%
+    },
+    
+    // ===== REBALANCEO =====
+    REBALANCE_FREQUENCY: 3600000,  // Cada hora
+    MIN_BALANCE_PER_EXCHANGE: 100, // Mínimo $100
+    RESERVE_PERCENTAGE: 0.05,      // 5% reserva
+    
+    // ===== AUTO-COMPOUND =====
+    AUTO_COMPOUND: true,           // Reinvertir ganancias
+    COMPOUND_THRESHOLD: 100        // Reinvertir cada $100 ganancia
+}
+```
+
+### 💰 Cómo Gestionar el Portfolio
+
+1. **Cambiar Balance Inicial**:
+   ```javascript
+   INITIAL_BALANCE: 5000, // ← Cambiar a $5,000
+   ```
+
+2. **Modificar Distribución**:
+   ```javascript
+   TARGET_ALLOCATION: {
+       "Binance": 0.50,    // ← 50% en Binance
+       "Coinbase": 0.30,   // ← 30% en Coinbase
+       "Kraken": 0.20      // ← 20% en Kraken
+   }
+   ```
+
+3. **Configurar Auto-Compound**:
+   ```javascript
+   AUTO_COMPOUND: false,        // ← Deshabilitar reinversión
+   COMPOUND_THRESHOLD: 50       // ← Reinvertir cada $50
+   ```
+
+---
+
+## 🔔 ALERTAS Y NOTIFICACIONES
+
+### Configuración de Alertas
+
+```javascript
+ALERTS: {
+    ENABLED: true,
+    
+    // ===== CANALES DE NOTIFICACIÓN =====
+    CHANNELS: {
+        EMAIL: {
+            enabled: true,
+            smtp: {
+                host: "smtp.gmail.com",
+                port: 587,
+                secure: false,
+                auth: {
+                    user: "tu-email@gmail.com",
+                    pass: "tu-app-password"
+                }
+            },
+            from: "bot@tudominio.com",
+            to: ["tu-email@gmail.com"]
+        },
+        
+        TELEGRAM: {
+            enabled: true,
+            botToken: "TU_BOT_TOKEN_TELEGRAM",
+            chatId: "TU_CHAT_ID",
+            parseMode: "HTML"
+        },
+        
+        DISCORD: {
+            enabled: false,
+            webhookUrl: "TU_WEBHOOK_DISCORD"
+        },
+        
+        SLACK: {
+            enabled: false,
+            webhookUrl: "TU_WEBHOOK_SLACK"
+        }
+    },
+    
+    // ===== TIPOS DE ALERTAS =====
+    ALERT_TYPES: {
+        TRADE_EXECUTED: {
+            enabled: true,
+            priority: "medium",
+            channels: ["email", "telegram"]
+        },
+        PROFIT_TARGET: {
+            enabled: true,
+            priority: "high",
+            channels: ["email", "telegram"],
+            threshold: 100 // Alertar cada $100 ganancia
+        },
+        RISK_WARNING: {
+            enabled: true,
+            priority: "high",
+            channels: ["email", "telegram"]
+        },
+        DAILY_SUMMARY: {
+            enabled: true,
+            priority: "low",
+            channels: ["email"],
+            time: "23:59"
+        }
+    }
+}
+```
+
+### 📱 Cómo Configurar Notificaciones
+
+1. **Configurar Email**:
+   ```javascript
+   EMAIL: {
+       enabled: true,
+       smtp: {
+           host: "smtp.gmail.com",
+           auth: {
+               user: "tu-email@gmail.com",
+               pass: "tu-app-password" // ← Usar App Password de Gmail
+           }
+       },
+       to: ["email1@gmail.com", "email2@gmail.com"] // ← Múltiples emails
+   }
+   ```
+
+2. **Configurar Telegram**:
+   - Crear bot con @BotFather
+   - Obtener token del bot
+   - Obtener chat ID enviando mensaje al bot
+   ```javascript
+   TELEGRAM: {
+       enabled: true,
+       botToken: "123456789:ABCdefGHIjklMNOpqrsTUVwxyz", // ← Token del bot
+       chatId: "123456789" // ← Tu chat ID
+   }
+   ```
+
+3. **Personalizar Alertas**:
+   ```javascript
+   PROFIT_TARGET: {
+       enabled: true,
+       threshold: 50, // ← Alertar cada $50 en lugar de $100
+       channels: ["telegram"] // ← Solo por Telegram
+   }
+   ```
+
+---
+
+## 🤖 INTELIGENCIA ARTIFICIAL
+
+### Configuración de IA
+
+```javascript
+AI_TRADING: {
+    ENABLED: true,
+    
+    // ===== RUTAS DE MODELOS =====
+    MODEL_PATH: "./models",
+    
+    // ===== DATOS DE ENTRENAMIENTO =====
+    TRAINING_DATA_DAYS: 30,        // 30 días de datos
+    PREDICTION_HORIZON: 3600,      // Predecir 1 hora adelante
+    
+    // ===== CARACTERÍSTICAS =====
+    FEATURES: [
+        "price",
+        "volume", 
+        "volatility",
+        "spread",
+        "momentum",
+        "rsi",
+        "macd"
+    ],
+    
+    // ===== MODELOS =====
+    MODELS: {
+        PRICE_PREDICTION: {
+            type: "lstm",
+            epochs: 100,
+            batchSize: 32,
+            learningRate: 0.001
+        },
+        OPPORTUNITY_SCORING: {
+            type: "random_forest",
+            nEstimators: 100,
+            maxDepth: 10
+        },
+        RISK_ASSESSMENT: {
+            type: "gradient_boosting",
+            nEstimators: 50,
+            learningRate: 0.1
+        }
+    },
+    
+    // ===== AUTO-REENTRENAMIENTO =====
+    AUTO_RETRAIN: true,
+    RETRAIN_THRESHOLD: 0.1         // Reentrenar si precisión < 90%
+}
+```
+
+### 🧠 Cómo Configurar la IA
+
+1. **Habilitar/Deshabilitar IA**:
+   ```javascript
+   AI_TRADING: {
+       ENABLED: false, // ← Deshabilitar IA completamente
+   }
+   ```
+
+2. **Ajustar Datos de Entrenamiento**:
+   ```javascript
+   TRAINING_DATA_DAYS: 60,    // ← Usar 60 días de datos
+   PREDICTION_HORIZON: 1800   // ← Predecir 30 minutos
+   ```
+
+3. **Modificar Características**:
+   ```javascript
+   FEATURES: [
+       "price",
+       "volume",
+       "spread"  // ← Solo usar estas 3 características
+   ]
+   ```
+
+---
+
+## 📊 BACKTESTING
+
+### Configuración de Backtesting
+
+```javascript
+BACKTESTING: {
+    ENABLED: true,
+    
+    // ===== FUENTE DE DATOS =====
+    DATA_SOURCE: "historical", // "historical" | "simulation"
+    DEFAULT_PERIOD: 30,        // 30 días por defecto
+    
+    // ===== COSTOS DE TRADING =====
+    COMMISSION_RATE: 0.001,    // 0.1% comisión
+    SLIPPAGE_RATE: 0.0005,     // 0.05% slippage
+    
+    // ===== CAPITAL INICIAL =====
+    INITIAL_CAPITAL: 10000,    // $10,000
+    
+    // ===== BENCHMARK =====
+    BENCHMARK: "BTC",          // Comparar con BTC
+    
+    // ===== MÉTRICAS =====
+    METRICS: [
+        "total_return",
+        "sharpe_ratio",
+        "max_drawdown",
+        "win_rate",
+        "profit_factor"
+    ],
+    
+    // ===== MONTE CARLO =====
+    MONTE_CARLO_SIMULATIONS: 1000,
+    CONFIDENCE_INTERVALS: [0.95, 0.99]
+}
+```
+
+### 📈 Cómo Usar el Backtesting
+
+1. **Ejecutar Backtest Básico**:
+   ```javascript
+   // En el código del bot
+   const backtester = new BacktestEngine(config);
+   
+   const results = await backtester.runBacktest({
+       strategy: 'basic',
+       pairs: ['BTC/USDT', 'ETH/USDT'],
+       startDate: new Date('2024-01-01'),
+       endDate: new Date('2024-01-31')
+   });
+   ```
+
+2. **Cambiar Período de Prueba**:
+   ```javascript
+   DEFAULT_PERIOD: 90, // ← Probar con 90 días
+   ```
+
+3. **Ajustar Costos**:
+   ```javascript
+   COMMISSION_RATE: 0.0005, // ← Reducir comisión a 0.05%
+   SLIPPAGE_RATE: 0.001     // ← Aumentar slippage a 0.1%
+   ```
+
+---
+
+## 📱 API MÓVIL
+
+### Configuración de API Móvil
+
+```javascript
+MOBILE_API: {
+    ENABLED: true,
+    PORT: 3001,
+    
+    // ===== AUTENTICACIÓN =====
+    JWT_SECRET: "tu-jwt-secret-muy-seguro",
+    JWT_EXPIRY: "24h",
+    
+    // ===== RATE LIMITING =====
+    RATE_LIMIT: {
+        windowMs: 15 * 60 * 1000, // 15 minutos
+        max: 100                   // 100 requests por ventana
+    },
+    
+    // ===== CORS =====
+    CORS: {
+        origin: ["http://localhost:3000", "https://tu-app.com"],
+        credentials: true
+    },
+    
+    // ===== ENDPOINTS =====
+    ENDPOINTS: {
+        STATUS: "/api/mobile/status",
+        TRADES: "/api/mobile/trades",
+        PORTFOLIO: "/api/mobile/portfolio",
+        ALERTS: "/api/mobile/alerts",
+        SETTINGS: "/api/mobile/settings"
+    },
+    
+    // ===== NOTIFICACIONES PUSH =====
+    PUSH_NOTIFICATIONS: {
+        enabled: true,
+        fcmServerKey: "TU_FCM_SERVER_KEY"
+    }
+}
+```
+
+### 📲 Cómo Configurar la API Móvil
+
+1. **Cambiar Puerto**:
+   ```javascript
+   PORT: 8080, // ← Cambiar a puerto 8080
+   ```
+
+2. **Configurar CORS**:
+   ```javascript
+   CORS: {
+       origin: ["https://mi-app.com"], // ← Solo tu dominio
+       credentials: true
+   }
+   ```
+
+3. **Ajustar Rate Limiting**:
+   ```javascript
+   RATE_LIMIT: {
+       windowMs: 5 * 60 * 1000, // ← 5 minutos
+       max: 50                   // ← 50 requests máximo
+   }
+   ```
+
+---
+
+## 🖥️ DASHBOARD WEB
+
+### Configuración del Dashboard
+
+```javascript
+DASHBOARD: {
+    ENABLED: true,
+    PORT: 3000,
+    
+    // ===== AUTENTICACIÓN =====
+    AUTH: {
+        enabled: true,
+        username: "admin",
+        password: "admin123" // ← CAMBIAR ESTO
+    },
+    
+    // ===== ACTUALIZACIÓN =====
+    UPDATE_INTERVAL: 5000,     // Actualizar cada 5 segundos
+    
+    // ===== GRÁFICOS =====
+    CHARTS: {
+        maxDataPoints: 100,    // Máximo 100 puntos en gráficos
+        timeframe: "1h"        // Timeframe por defecto
+    },
+    
+    // ===== TEMA =====
+    THEME: {
+        darkMode: true,        // Modo oscuro por defecto
+        primaryColor: "#007bff"
+    }
+}
+```
+
+### 🎨 Cómo Personalizar el Dashboard
+
+1. **Cambiar Credenciales**:
+   ```javascript
+   AUTH: {
+       enabled: true,
+       username: "mi-usuario",     // ← Tu usuario
+       password: "mi-password-seguro" // ← Tu password
+   }
+   ```
+
+2. **Ajustar Actualización**:
+   ```javascript
+   UPDATE_INTERVAL: 2000, // ← Actualizar cada 2 segundos
+   ```
+
+3. **Personalizar Tema**:
+   ```javascript
+   THEME: {
+       darkMode: false,           // ← Modo claro
+       primaryColor: "#28a745"    // ← Color verde
+   }
+   ```
+
+---
+
+## 📝 LOGS Y MONITOREO
+
+### Configuración de Logs
+
+```javascript
+LOGGING: {
+    ENABLED: true,
+    LEVEL: "info", // "error" | "warn" | "info" | "debug"
+    
+    // ===== ARCHIVOS DE LOG =====
+    FILES: {
+        error: "./logs/error.log",
+        combined: "./logs/combined.log",
+        trades: "./logs/trades.log"
+    },
+    
+    // ===== ROTACIÓN =====
+    ROTATION: {
+        maxSize: "20m",        // Máximo 20MB por archivo
+        maxFiles: "14d"        // Mantener 14 días
+    },
+    
+    // ===== FORMATO =====
+    FORMAT: "json" // "json" | "simple"
+}
+```
+
+### 📊 Monitoreo y Métricas
+
+```javascript
+MONITORING: {
+    ENABLED: true,
+    
+    // ===== MÉTRICAS =====
+    METRICS: {
+        trades_per_hour: true,
+        profit_per_hour: true,
+        error_rate: true,
+        latency: true
+    },
+    
+    // ===== HEALTH CHECKS =====
+    HEALTH_CHECKS: {
+        interval: 60000,       // Cada minuto
+        endpoints: [
+            "exchanges",
+            "database",
+            "ai_models"
+        ]
+    }
+}
+```
+
+---
+
+## 🔒 SEGURIDAD
+
+### Configuración de Seguridad
+
+```javascript
+SECURITY: {
+    // ===== ENCRIPTACIÓN =====
+    ENCRYPTION: {
+        algorithm: "aes-256-gcm",
+        keyLength: 32
+    },
+    
+    // ===== API KEYS =====
+    API_SECURITY: {
+        encryptKeys: true,     // Encriptar API keys
+        rotateKeys: false,     // Rotar keys automáticamente
+        keyExpiry: 2592000     // 30 días
+    },
+    
+    // ===== RATE LIMITING =====
+    RATE_LIMITING: {
+        enabled: true,
+        requests_per_minute: 60
+    },
+    
+    // ===== IP WHITELIST =====
+    IP_WHITELIST: {
+        enabled: false,
+        allowed_ips: [
+            "192.168.1.100",
+            "10.0.0.50"
+        ]
+    }
+}
+```
+
+### 🛡️ Mejores Prácticas de Seguridad
+
+1. **Cambiar Passwords por Defecto**:
+   ```javascript
+   AUTH: {
+       username: "tu-usuario-unico",
+       password: "Password-Muy-Seguro-123!"
+   }
+   ```
+
+2. **Usar Variables de Entorno**:
+   ```bash
+   # .env
+   BINANCE_API_KEY=tu_api_key_real
+   BINANCE_API_SECRET=tu_api_secret_real
+   JWT_SECRET=tu_jwt_secret_muy_largo_y_seguro
+   ```
+
+3. **Habilitar IP Whitelist**:
+   ```javascript
+   IP_WHITELIST: {
+       enabled: true,
+       allowed_ips: ["tu.ip.publica.aqui"]
+   }
+   ```
+
+---
+
+## 🚀 COMANDOS DE EJECUCIÓN
+
+### Iniciar el Bot
+
+```bash
+# Modo desarrollo
+npm run dev
+
+# Modo producción
+npm start
+
+# Con configuración específica
+node src/server.js --config=production
+
+# Solo simulación
+node src/server.js --mode=simulation
+
+# Con estrategia específica
+node src/server.js --strategy=basic
+```
+
+### Scripts Útiles
+
+```bash
+# Ejecutar backtest
+npm run backtest
+
+# Limpiar logs
+npm run clean-logs
+
+# Verificar configuración
+npm run check-config
+
+# Actualizar modelos de IA
+npm run update-models
+```
+
+---
+
+## 🔧 TROUBLESHOOTING
+
+### Problemas Comunes
+
+1. **Error de API Keys**:
+   ```
+   Error: Invalid API key
+   Solución: Verificar que las API keys sean correctas y tengan permisos
+   ```
+
+2. **Conexión a Exchange**:
+   ```
+   Error: Connection timeout
+   Solución: Verificar conexión a internet y status del exchange
+   ```
+
+3. **Insuficientes Fondos**:
+   ```
+   Error: Insufficient balance
+   Solución: Verificar balances en exchanges y ajustar INITIAL_BALANCE
+   ```
+
+4. **Modelo de IA No Carga**:
+   ```
+   Error: Model not found
+   Solución: Ejecutar npm run update-models
+   ```
+
+### Logs de Debug
+
+```javascript
+// Habilitar logs detallados
+LOGGING: {
+    LEVEL: "debug", // ← Cambiar a debug
+}
+
+// Ver logs en tiempo real
+tail -f logs/combined.log
+```
+
+### Verificar Estado
+
+```bash
+# Verificar que todo funcione
+curl http://localhost:3001/api/mobile/health
+
+# Verificar dashboard
+curl http://localhost:3000/api/status
+```
+
+---
+
+## 📞 SOPORTE Y CONTACTO
+
+### Archivos Importantes
+
+- **Configuración**: `/src/strategies/config.js`
+- **Bot Principal**: `/src/strategies/arbitrage-bot.js`
+- **Logs**: `/logs/`
+- **Modelos IA**: `/models/`
+- **Dashboard**: `/public/`
+
+### Comandos de Emergencia
+
+```bash
+# Parar el bot inmediatamente
+pkill -f "node src/server.js"
+
+# Backup de configuración
+cp src/strategies/config.js config.backup.js
+
+# Restaurar configuración
+cp config.backup.js src/strategies/config.js
+```
+
+---
+
+## 📋 CHECKLIST DE CONFIGURACIÓN
+
+### Antes de Iniciar
+
+- [ ] Configurar API keys de exchanges
+- [ ] Establecer balance inicial
+- [ ] Configurar alertas (email/telegram)
+- [ ] Verificar estrategias habilitadas
+- [ ] Ajustar límites de riesgo
+- [ ] Probar en modo simulación
+- [ ] Configurar monitoreo
+
+### Configuración Mínima
+
+```javascript
+// Configuración básica para empezar
+const config = {
+    TRADING_MODE: "simulation",
+    TRADING_PAIRS: ["BTC/USDT"],
+    EXCHANGES: {
+        BINANCE: {
+            enabled: true,
+            apiKey: "TU_API_KEY",
+            apiSecret: "TU_API_SECRET"
+        }
+    },
+    STRATEGIES: {
+        BASIC: {
+            enabled: true,
+            minProfitPercentage: 0.2
+        }
+    },
+    RISK_MANAGEMENT: {
+        MAX_DAILY_LOSS: 100,
+        STOP_LOSS: { enabled: true, percentage: 0.02 }
+    }
+}
+```
+
+---
+
+**¡IMPORTANTE!** 
+
+- Siempre probar en modo `simulation` antes de usar `live`
+- Nunca compartir tus API keys
+- Hacer backup de la configuración antes de cambios importantes
+- Monitorear los logs regularmente
+- Empezar con cantidades pequeñas
+
+---
+
+*Este manual cubre todas las configuraciones posibles del bot. Guárdalo como referencia y modifica según tus necesidades.*
+```
+
+## 3. Archivo de Variables de Entorno

@@ -1,0 +1,86 @@
+# 🚀 GUÍA DE INICIO RÁPIDO
+
+## 1. Instalación
+
+```bash
+# Clonar repositorio
+git clone <tu-repositorio>
+cd arbitrage-bot
+
+# Instalar dependencias
+npm install
+
+# Configuración rápida
+node setup.js
+```
+
+## 2. Configuración Mínima
+
+### Opción A: Configuración Automática
+```bash
+node setup.js
+```
+
+### Opción B: Configuración Manual
+1. Copiar `.env.example` a `.env`
+2. Editar `src/strategies/config.js`
+3. Configurar API keys de exchanges
+
+## 3. Primer Uso
+
+```bash
+# Iniciar en modo simulación
+npm start
+
+# Ver dashboard
+http://localhost:3000
+```
+
+## 4. Configuraciones Importantes
+
+### Cambiar a Trading Real
+```javascript
+// En config.js
+TRADING_MODE: "live"
+```
+
+### Ajustar Ganancia Mínima
+```javascript
+// En config.js
+BASIC: {
+    minProfitPercentage: 0.5 // 0.5% mínimo
+}
+```
+
+### Configurar Alertas
+```javascript
+// En config.js
+ALERTS: {
+    CHANNELS: {
+        EMAIL: { enabled: true },
+        TELEGRAM: { enabled: true }
+    }
+}
+```
+
+## 5. Monitoreo
+
+- **Dashboard**: http://localhost:3000
+- **API**: http://localhost:3001
+- **Logs**: `tail -f logs/combined.log`
+
+## 6. Comandos Útiles
+
+```bash
+# Parar bot
+Ctrl+C
+
+# Ver logs en tiempo real
+npm run logs
+
+# Ejecutar backtest
+npm run backtest
+
+# Verificar configuración
+npm run check
+```
