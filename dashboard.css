@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #343a40;
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px 0;
+    position: fixed;
+    width: inherit;
+    max-width: inherit;
+}
+
+.sidebar-header {
+    padding: 0 15px 20px;
+    border-bottom: 1px solid #495057;
+}
+
+.sidebar .nav-link {
+    color: #adb5bd;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: #fff;
+    background-color: #495057;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 16.666667%; /* Ajustar según el ancho del sidebar */
+    padding: 20px;
+}
+
+.header {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 15px 20px;
+}
+
+.card-header h5 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Status Indicator Styles */
+.status-indicator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.status-label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.status-value {
+    margin-right: 10px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-dot.active {
+    background-color: #28a745;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3);
+}
+
+.status-dot.inactive {
+    background-color: #dc3545;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.3);
+}
+
+/* Metric Styles */
+.metric {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.metric-label {
+    font-weight: 600;
+}
+
+.metric-value {
+    font-weight: 500;
+    color: #495057;
+}
+
+/* Risk Metric Styles */
+.risk-metric {
+    margin-bottom: 15px;
+}
+
+.risk-label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.risk-value {
+    font-weight: 500;
+    color: #495057;
+    float: right;
+}
+
+.progress {
+    height: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    background-color: #e9ecef;
+    overflow: hidden;
+}
+
+/* Chart Container Styles */
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+/* Balance Container Styles */
+.balances-container {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.balance-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.balance-item:last-child {
+    border-bottom: none;
+}
+
+.exchange-name {
+    font-weight: 600;
+}
+
+.exchange-balance {
+    font-weight: 500;
+    color: #495057;
+}
+
+/* Control Button Styles */
+.controls {
+    display: block !important;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-weight: 500;
+}
+
+/* Mode Indicator Styles */
+.mode-indicator {
+    font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .sidebar {
+        position: static;
+        min-height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+}

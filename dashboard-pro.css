@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;600&display=swap');
+
+/* ---- Tipografía Moderna ---- */
+body {
+  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+  background: linear-gradient(120deg, #181a20 55%, #23272f 100%);
+  color: #fff; /* Blanco para el contenido */
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* ---- Sidebar ---- */
+.sidebar {
+  width: 220px; /* O el ancho que uses */
+  background: #23273a;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  /* Para que el contenido nunca se salga */
+  overflow: hidden;
+}
+
+.sidebar-header {
+  padding: 24px 12px 18px 12px;
+  flex-shrink: 0;
+}
+
+.nav.flex-column {
+  flex: 1 1 auto;
+  overflow-y: auto;   /* Aquí el truco: SOLO el menú scrollea */
+  padding-bottom: 16px;
+}
+
+.sidebar-logo {
+  width: 60px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border: 2px solid #fff3;
+  background: #222;
+}
+
+.sidebar-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #FFA500; /* Naranja brillante */
+}
+.sidebar-badge {
+  font-size: 0.9rem;
+  color: #e5ecfa;
+  background: #3b3b5c;
+  border-radius: 12px;
+  padding: 3px 12px;
+  margin-top: 6px;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.nav {
+  margin-top: 25px;
+}
+.nav-link {
+  color: #d1d9e6;
+  font-size: 1.06rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 8px 0 0 8px;
+  margin: 7px 0;
+  transition: background 0.18s, color 0.18s, padding 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+.nav-link.active, .nav-link:hover {
+  background: linear-gradient(90deg, #FFA500 0%, #FFD700 80%);
+  color: #222c;
+  font-weight: bold;
+  box-shadow: 2px 2px 14px #ffd70022;
+  padding-left: 36px;
+}
+.nav-link .emoji {
+  font-size: 1.2em;
+  margin-right: 2px;
+}
+.nav-link .bi {
+  font-size: 1.15em;
+}
+
+.main-content {
+  margin-left: 240px;
+  padding: 32px 18px 32px 18px;
+  min-height: 100vh;
+  transition: margin 0.3s;
+}
+
+/* ---- Título Principal ---- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #23273a;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #0003;
+  padding: 18px 26px;
+  margin-bottom: 35px;
+}
+.header-title {
+  font-size: 2.05rem;
+  font-weight: 800;
+  color: #FFA500; /* Naranja brillante */
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header-emoji {
+  font-size: 1.8rem;
+}
+
+.controls {
+  display: block !important;
+  width: 100% !important;
+}
+
+.btn {
+  font-family: 'Inter', Arial, sans-serif;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 1.01rem;
+  cursor: pointer;
+  background: #4e53e2;
+  color: #fff;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 1px 7px #0002;
+}
+.btn-outline-secondary {
+  background: #23273a;
+  color: #FFA500;
+  border: 1px solid #FFA500;
+}
+.btn-primary, .btn:active, .btn:focus {
+  background: linear-gradient(90deg,#FFA500,#FFD700);
+  color: #181a20;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* ---- Tarjeta de Paneles ---- */
+.dashboard-card {
+  background: #282c3e;
+  border-radius: 18px;
+  box-shadow: 0 4px 25px #0004;
+  padding: 24px 20px 14px 20px;
+  margin-bottom: 32px;
+  transition: box-shadow 0.22s;
+}
+.dashboard-card:hover {
+  box-shadow: 0 8px 30px #0007;
+}
+
+/* ---- Títulos y Subtítulos de Paneles ---- */
+.card-header {
+  background: none;
+  border: none;
+  font-size: 1.35rem;
+  color: #FFA500; /* Naranja brillante */
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1.2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Subtítulos (por ejemplo, secciones dentro de la tarjeta) */
+h6, .subtitle, .dashboard-card h6 {
+  color: #FFD700 !important; /* Amarillo dorado */
+  font-size: 1.09rem;
+  font-weight: 600;
+  margin-bottom: 13px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 0.8px;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 1.01rem;
+}
+.dashboard-table th, .dashboard-table td {
+  padding: 9px 12px;
+  border-bottom: 1px solid #343b50;
+  color: #fff; /* Blanco para todo el contenido de tabla */
+  font-family: 'Inter', Arial, sans-serif;
+}
+.dashboard-table th {
+  background: #22263a;
+  color: #FFA500; /* Naranja para los headers de tabla */
+  font-weight: 700;
+  font-size: 1.04rem;
+}
+.dashboard-table tr:last-child td {
+  border-bottom: none;
+}
+.dashboard-table td .emoji {
+  font-size: 1.1em;
+}
+
+/* ---- Barras de Progreso ---- */
+.progress-bar {
+  background: linear-gradient(90deg, #FFA500, #FFD700);
+}
+
+/* ---- Métricas ---- */
+.metric, .risk-metric {
+  margin-bottom: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.metric-label, .risk-label {
+  font-weight: 600;
+  color: #FFD700; /* Amarillo */
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.metric-value, .risk-value {
+  color: #FFA500; /* Naranja */
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+/* ---- Contenidos generales ---- */
+.dashboard-card, .dashboard-card * {
+  color: #fff;
+}
+
+/* Rebalance Panel - Mejor contraste */
+#rebalance.panel, .panel, .dashboard-card {
+  color: #fff !important;
+  background: #181c27 !important;
+}
+
+#rebalance input, #rebalance select {
+  background: #222d3d;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+#rebalance input::placeholder {
+  color: #bbb;
+}
+
+#rebalance table th,
+#rebalance table td {
+  color: #fff !important;
+  background: #222d3d !important;
+  font-weight: 500;
+}
+
+#rebalance button.btn-warning {
+  color: #242424 !important;
+  background: linear-gradient(90deg, #ffd700 70%, #ffb300 100%);
+  font-weight: bold;
+  border: none;
+}
+
+#rebalance button.btn-success {
+  color: #fff !important;
+  background: linear-gradient(90deg, #28a745 60%, #00b369 100%);
+  font-weight: bold;
+  border: none;
+}
+
+#rebalance b, #rebalance h3, #rebalance h4 {
+  color: #FFD700;
+}
+
+#rebalance option, #rebalance select {
+  color: #111;
+  background: #ffe;
+}
+
+#rebalance .form-select {
+  background: #222d3d;
+  color: #fff;
+}
+
+#rebalance p, #rebalance .small {
+  color: #e6e6e6;
+}
+
+#rebalance .btn[disabled] {
+  opacity: 0.6 !important;
+  color: #bbb !important;
+}
+
+#rebalance .btn.btn-warning:active,
+#rebalance .btn.btn-warning:focus {
+  background: #ffea70 !important;
+  color: #888 !important;
+}
+
+@media (max-width: 900px) {
+  .sidebar { width: 100vw; min-height: 80px; border-radius: 0 0 18px 18px; position: static;}
+  .main-content { margin-left: 0; padding: 12px;}
+  .header { flex-direction: column; gap: 12px; }
+}
+::-webkit-scrollbar { width: 7px; background: #222; }
+::-webkit-scrollbar-thumb { background: #444a; border-radius: 7px; }
+

@@ -1,0 +1,10 @@
+/* Aplica al contenedor principal del dashboard */
+.dashboard-main, .main-content, .dashboard-container {
+  margin-left: auto;
+  margin-right: auto;
+  /* Elige un ancho máximo adecuado para tu diseño */
+  max-width: 1100px;
+  min-width: 900px;
+  width: 100%;
+  display: block;
+}

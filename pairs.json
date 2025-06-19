@@ -1,0 +1,1865 @@
+[
+  {
+    "pair": "LTC/USDT",
+    "base": "LTC",
+    "quote": "USDT",
+    "binance": {
+      "address": "LiCH4dMWM6YRHFWYC78hppAk1SwUFkDAK4",
+      "network": "Litecoin",
+      "withdrawal_fee": 0.0001,
+      "withdrawal_min": 0.002,
+      "deposit_min": 0.002
+    },
+    "bybit": {
+      "address": "LLCxH3L5fn9ejTPVk3nWTJcqvvTWsu2LbJ",
+      "network": "Litecoin",
+      "withdrawal_fee": 0.0001,
+      "withdrawal_min": 0.001,
+      "deposit_min": 0.00000001
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 50,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "BNB/USDT",
+    "base": "BNB",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "BSC",
+      "withdrawal_fee": 0.00001,
+      "withdrawal_min": 0.0005,
+      "deposit_min": 0.000003
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "BSC",
+      "withdrawal_fee": 0.0002,
+      "withdrawal_min": 0.0002,
+      "deposit_min": 0.0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 30,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "XRP/USDT",
+    "base": "XRP",
+    "quote": "USDT",
+    "binance": {
+      "address": "rNxp4h8apvRis6mJf9Sh8C6iRxfrDWN7AV",
+      "network": "XRP",
+      "memo": "466152795",
+      "withdrawal_fee": 0.2,
+      "withdrawal_min": 2,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "rJn2zAPdFA193sixJwuFixRkYDUtx3apQh",
+      "network": "XRP",
+      "memo": "501350199",
+      "withdrawal_fee": 0.2,
+      "withdrawal_min": 1.2,
+      "deposit_min": 0.01
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 40,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "ALGO/USDT",
+    "base": "ALGO",
+    "quote": "USDT",
+    "binance": {
+      "address": "L43SHHRVHAIYHGFGXFBKM7IMZNYT7WSLSMXPHGNH4D5NPYOBIJSK35X5OE",
+      "network": "ALGO",
+      "withdrawal_fee": 0.008,
+      "withdrawal_min": 10,
+      "deposit_min": 0.007
+    },
+    "bybit": {
+      "address": "U5EPBBGTH4ZHEJMSYWRRBEOTOORYTSTSTYZITGDYM2KUQPDXWTHFDJPFVY",
+      "network": "ALGO",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 10,
+      "deposit_min": 1
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "ANIME/USDT",
+    "base": "ANIME",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "ARBITRUM",
+      "withdrawal_fee": 7.74,
+      "withdrawal_min": 16,
+      "deposit_min": 0.00000001
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "ARBI",
+      "withdrawal_fee": 16,
+      "withdrawal_min": 30,
+      "deposit_min": 1
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "APT/USDT",
+    "base": "APT",
+    "quote": "USDT",
+    "binance": {
+      "address": "0x0b69478291cb55e808a716a046cc0d1ab2981e85778957da3fd519c6061ccb9e",
+      "network": "APT",
+      "withdrawal_fee": 0.016,
+      "withdrawal_min": 0.06,
+      "deposit_min": 0.00015
+    },
+    "bybit": {
+      "address": "0x9f5ade930d03eb3fd1f0906f4e7edaddc458ac71260bf985bb61cfb61ac09191",
+      "network": "APTOS",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.01,
+      "deposit_min": 1
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "ARB/USDT",
+    "base": "ARB",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "ARBITRUM",
+      "withdrawal_fee": 0.56,
+      "withdrawal_min": 1.12,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "Arbitrum One",
+      "withdrawal_fee": 0.4,
+      "withdrawal_min": 0.4,
+      "deposit_min": 0.00000001
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "ATOM/USDT",
+    "base": "ATOM",
+    "quote": "USDT",
+    "binance": {
+      "address": "cosmos1j8pp7zvcu9z8vd882m284j29fn2dszh05cqvf9",
+      "network": "ATOM",
+      "memo": "100738176",
+      "withdrawal_fee": 0.02,
+      "withdrawal_min": 0.04,
+      "deposit_min": 0.00016
+    },
+    "bybit": {
+      "address": "cosmos1c8dskmuz2wj29tg3rygt8mzg92f09gwcqqyexa",
+      "network": "ATOM",
+      "withdrawal_fee": 0.005,
+      "withdrawal_min": 0.015,
+      "deposit_min": 0.0001
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "AVAX/USDT",
+    "base": "AVAX",
+    "quote": "USDT",
+    "binance": {
+      "address": "X-avax1j2suzh09083n9cyd80dk3lsr0c3e8ry3skk27q",
+      "network": "AVAX",
+      "withdrawal_fee": 0.008,
+      "withdrawal_min": 0.1,
+      "deposit_min": 0.00005
+    },
+    "bybit": {
+      "address": "X-avax1unlvn8ef6lpjsac0t37t9za6astc8a55pugnm2",
+      "network": "AVAX",
+      "withdrawal_fee": 0.008,
+      "withdrawal_min": 0.008,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "AXL/USDT",
+    "base": "AXL",
+    "quote": "USDT",
+    "binance": {
+      "address": "axelar17ewha7y7fr0xsej6xfep88rq30rse9hgynll78",
+      "network": "AXL",
+      "memo": "101408734",
+      "withdrawal_fee": 0.02,
+      "withdrawal_min": 1,
+      "deposit_min": 0.0015
+    },
+    "bybit": {
+      "address": "axelar1yzsury9fldydgk425gmphy2zyehh3emc43ds6x",
+      "network": "AXL",
+      "memo": "10048670",
+      "withdrawal_fee": 0.005,
+      "withdrawal_min": 0.005,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "BB/USDT",
+    "base": "BB",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "BounceBit",
+      "withdrawal_fee": 0.05,
+      "withdrawal_min": 1,
+      "deposit_min": 0.06
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "BounceBit",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 1,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "BEL/USDT",
+    "base": "BEL",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "BSC",
+      "withdrawal_fee": 0.051,
+      "withdrawal_min": 0.1,
+      "deposit_min": 0.002
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "BSC",
+      "withdrawal_fee": 0.12,
+      "withdrawal_min": 0.12,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "BERA/USDT",
+    "base": "BERA",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "BERA",
+      "withdrawal_fee": 0.001,
+      "withdrawal_min": 0.1,
+      "deposit_min": 0.00000002
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "BERA",
+      "withdrawal_fee": 0.000001,
+      "withdrawal_min": 0.00001,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "BOME/USDT",
+    "base": "BOME",
+    "quote": "USDT",
+    "binance": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 380,
+      "withdrawal_min": 760,
+      "deposit_min": 0.02
+    },
+    "bybit": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 400,
+      "withdrawal_min": 200,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "BONK/USDT",
+    "base": "BONK",
+    "quote": "USDT",
+    "binance": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 41657,
+      "withdrawal_min": 83314,
+      "deposit_min": 0.02
+    },
+    "bybit": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 40000,
+      "withdrawal_min": 50000,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "C98/USDT",
+    "base": "C98",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "BSC",
+      "withdrawal_fee": 0.26,
+      "withdrawal_min": 0.52,
+      "deposit_min": 0.007
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "BSC",
+      "withdrawal_fee": 0.3,
+      "withdrawal_min": 0.3,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "CAKE/USDT",
+    "base": "CAKE",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "BSC",
+      "withdrawal_fee": 0.0057,
+      "withdrawal_min": 0.011,
+      "deposit_min": 0.0006
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "BSC",
+      "withdrawal_fee": 0.023,
+      "withdrawal_min": 0.023,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "CATI/USDT",
+    "base": "CATI",
+    "quote": "USDT",
+    "binance": {
+      "address": "UQCT1S9xDKxJV7zpOYNpnof-_xym-dG7W3TYxeGLxLKSSSvB",
+      "network": "TON",
+      "withdrawal_fee": 1.08,
+      "withdrawal_min": 2.16,
+      "deposit_min": 0.00000002
+    },
+    "bybit": {
+      "address": "UQCT1S9xDKxJV7zpOYNpnof-_xym-dG7W3TYxeGLxLKSSSvB",
+      "network": "TON",
+      "withdrawal_fee": 0.3,
+      "withdrawal_min": 0.3,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+    },
+
+  {
+    "pair": "CELO/USDT",
+    "base": "CELO",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "CELO",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.1,
+      "deposit_min": 0.002
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "CELO",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.01,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "CGPT/USDT",
+    "base": "CGPT",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "BSC",
+      "withdrawal_fee": 10,
+      "withdrawal_min": 20,
+      "deposit_min": 0.02
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "BSC",
+      "withdrawal_fee": 12,
+      "withdrawal_min": 12,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "CHZ/USDT",
+    "base": "CHZ",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "Chiliz Chain",
+      "withdrawal_fee": 20,
+      "withdrawal_min": 40,
+      "deposit_min": 0.02
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "Chiliz Chain",
+      "withdrawal_fee": 10,
+      "withdrawal_min": 10,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "CYBER/USDT",
+    "base": "CYBER",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "OP Mainnet",
+      "withdrawal_fee": 0.2,
+      "withdrawal_min": 0.4,
+      "deposit_min": 0.002
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "OP Mainnet",
+      "withdrawal_fee": 0.3,
+      "withdrawal_min": 0.3,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "DOGS/USDT",
+    "base": "DOGS",
+    "quote": "USDT",
+    "binance": {
+      "address": "UQCT1S9xDKxJV7zpOYNpnof-_xym-dG7W3TYxeGLxLKSSSvB",
+      "network": "TON",
+      "withdrawal_fee": 0.3,
+      "withdrawal_min": 0.3,
+      "deposit_min": 0
+    },
+    "bybit": {
+      "address": "UQCT1S9xDKxJV7zpOYNpnof-_xym-dG7W3TYxeGLxLKSSSvB",
+      "network": "TON",
+      "withdrawal_fee": 0.3,
+      "withdrawal_min": 0.3,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "DOT/USDT",
+    "base": "DOT",
+    "quote": "USDT",
+    "binance": {
+      "address": "13zhBAjXq6XWusrrDw8LpYBNaeG4gAXjFtSm8Dw81LV4wAqm",
+      "network": "DOT",
+      "withdrawal_fee": 0.1,
+      "withdrawal_min": 1.5,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "13zhBAjXq6XWusrrDw8LpYBNaeG4gAXjFtSm8Dw81LV4wAqm",
+      "network": "DOT",
+      "withdrawal_fee": 0.1,
+      "withdrawal_min": 0.1,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 40,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "DYDX/USDT",
+    "base": "DYDX",
+    "quote": "USDT",
+    "binance": {
+      "address": "dydx1plrw2mur00y6mh94vc4u5y9wz56ktdnt6ep4gq",
+      "network": "DYDX",
+      "withdrawal_fee": 0.1,
+      "withdrawal_min": 1,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "dydx1plrw2mur00y6mh94vc4u5y9wz56ktdnt6ep4gq",
+      "network": "DYDX",
+      "withdrawal_fee": 0.09,
+      "withdrawal_min": 0.09,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "EGLD/USDT",
+    "base": "EGLD",
+    "quote": "USDT",
+    "binance": {
+      "address": "erd1ld8ylfwe0dj72mkeq73fz9x36tn0p943cmfv6fwzft9jt0rjf0xs5xdfu4",
+      "network": "EGLD",
+      "withdrawal_fee": 0.004,
+      "withdrawal_min": 0.008,
+      "deposit_min": 0.0005
+    },
+    "bybit": {
+      "address": "erd1ld8ylfwe0dj72mkeq73fz9x36tn0p943cmfv6fwzft9jt0rjf0xs5xdfu4",
+      "network": "EGLD",
+      "withdrawal_fee": 0.005,
+      "withdrawal_min": 0.005,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "ENJ/USDT",
+    "base": "ENJ",
+    "quote": "USDT",
+    "binance": {
+      "address": "enCbjnvB5Zpu26ciGoMPaNVSWXWKqtbGptKpDj1UUsZqF2o6i",
+      "network": "Enjin",
+      "withdrawal_fee": 15,
+      "withdrawal_min": 30,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "enCbjnvB5Zpu26ciGoMPaNVSWXWKqtbGptKpDj1UUsZqF2o6i",
+      "network": "Enjin",
+      "withdrawal_fee": 12,
+      "withdrawal_min": 12,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "FIDA/USDT",
+    "base": "FIDA",
+    "quote": "USDT",
+    "binance": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 0.1,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0.0001
+    },
+    "bybit": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 0.2,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "FLOKI/USDT",
+    "base": "FLOKI",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "BSC",
+      "withdrawal_fee": 210000,
+      "withdrawal_min": 420000,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "BSC",
+      "withdrawal_fee": 200000,
+      "withdrawal_min": 200000,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "FLOW/USDT",
+    "base": "FLOW",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xdbb61e402a382eb3",
+      "network": "FLOW",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.05,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "0xdbb61e402a382eb3",
+      "network": "FLOW",
+      "withdrawal_fee": 0.02,
+      "withdrawal_min": 0.02,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "GMT/USDT",
+    "base": "GMT",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "BSC",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 2,
+      "deposit_min": 0.02
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "BSC",
+      "withdrawal_fee": 1.2,
+      "withdrawal_min": 1.2,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "GMX/USDT",
+    "base": "GMX",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "AVAXC",
+      "withdrawal_fee": 0.005,
+      "withdrawal_min": 0.005,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "AVAXC",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.01,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "HAEDAL/USDT",
+    "base": "HAEDAL",
+    "quote": "USDT",
+    "binance": {
+      "address": "0x17cbbf04d589fda59d51ffde92501894fa643de3be3e447f7cabeca7aa90082c",
+      "network": "SUI",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 1,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "0x17cbbf04d589fda59d51ffde92501894fa643de3be3e447f7cabeca7aa90082c",
+      "network": "SUI",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 1,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "HBAR/USDT",
+    "base": "HBAR",
+    "quote": "USDT",
+    "binance": {
+      "address": "0.0.615422",
+      "network": "HBAR",
+      "memo": "10067078",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 1,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "0.0.615422",
+      "network": "HBAR",
+      "memo": "10067078",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 1,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "HMSTR/USDT",
+    "base": "HMSTR",
+    "quote": "USDT",
+    "binance": {
+      "address": "UQCT1S9xDKxJV7zpOYNpnof-_xym-dG7W3TYxeGLxLKSSSvB",
+      "network": "TON",
+      "withdrawal_fee": 0.3,
+      "withdrawal_min": 0.3,
+      "deposit_min": 0
+    },
+    "bybit": {
+      "address": "UQCT1S9xDKxJV7zpOYNpnof-_xym-dG7W3TYxeGLxLKSSSvB",
+      "network": "TON",
+      "withdrawal_fee": 0.3,
+      "withdrawal_min": 0.3,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+
+  {
+    "pair": "HOME/USDT",
+    "base": "HOME",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "BSC",
+      "withdrawal_fee": 0.13,
+      "withdrawal_min": 0.13,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "BSC",
+      "withdrawal_fee": 0.12,
+      "withdrawal_min": 0.12,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "HYPER/USDT",
+    "base": "HYPER",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "BSC",
+      "withdrawal_fee": 3,
+      "withdrawal_min": 3,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "BSC",
+      "withdrawal_fee": 3,
+      "withdrawal_min": 3,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "ICP/USDT",
+    "base": "ICP",
+    "quote": "USDT",
+    "binance": {
+      "address": "dc8d5fcdfee8c6afe59bd85155fa18b0cbc1fee57e6b7f66ef10220d25d4bc1a",
+      "network": "ICP",
+      "withdrawal_fee": 0.0001,
+      "withdrawal_min": 0.0002,
+      "deposit_min": 0.00002
+    },
+    "bybit": {
+      "address": "dc8d5fcdfee8c6afe59bd85155fa18b0cbc1fee57e6b7f66ef10220d25d4bc1a",
+      "network": "ICP",
+      "withdrawal_fee": 0.0001,
+      "withdrawal_min": 0.0001,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "ICX/USDT",
+    "base": "ICX",
+    "quote": "USDT",
+    "binance": {
+      "address": "hx8c278a658331a569b640e925ac55a70a8e5534b6",
+      "network": "ICX",
+      "withdrawal_fee": 0.02,
+      "withdrawal_min": 0.1,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "hx8c278a658331a569b640e925ac55a70a8e5534b6",
+      "network": "ICX",
+      "withdrawal_fee": 0.02,
+      "withdrawal_min": 0.02,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "INJ/USDT",
+    "base": "INJ",
+    "quote": "USDT",
+    "binance": {
+      "address": "inj1vmqxkjmruu2q06qlfg7sjqe8chhsejy7mh6j6n",
+      "network": "INJ",
+      "memo": "10014232",
+      "withdrawal_fee": 0.002,
+      "withdrawal_min": 0.005,
+      "deposit_min": 0.0001
+    },
+    "bybit": {
+      "address": "inj1vmqxkjmruu2q06qlfg7sjqe8chhsejy7mh6j6n",
+      "network": "INJ",
+      "memo": "10014232",
+      "withdrawal_fee": 0.002,
+      "withdrawal_min": 0.002,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "IO/USDT",
+    "base": "IO",
+    "quote": "USDT",
+    "binance": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 0.1,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0.0001
+    },
+    "bybit": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 0.2,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "JUP/USDT",
+    "base": "JUP",
+    "quote": "USDT",
+    "binance": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 0.1,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0.0001
+    },
+    "bybit": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 0.2,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "KAIA/USDT",
+    "base": "KAIA",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "KAIA",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.02,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "KAIA",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.01,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "KMNO/USDT",
+    "base": "KMNO",
+    "quote": "USDT",
+    "binance": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 0.1,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0.0001
+    },
+    "bybit": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 0.2,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "KSM/USDT",
+    "base": "KSM",
+    "quote": "USDT",
+    "binance": {
+      "address": "GJR9MqPoddfpZxotFsX8v77qubfeW5jpCD7eYT8CpZKiaMV",
+      "network": "KSM",
+      "withdrawal_fee": 0.02,
+      "withdrawal_min": 0.1,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "GJR9MqPoddfpZxotFsX8v77qubfeW5jpCD7eYT8CpZKiaMV",
+      "network": "KSM",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.01,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "LUNA/USDT",
+    "base": "LUNA",
+    "quote": "USDT",
+    "binance": {
+      "address": "terra188gwmnvl8zv4n5639hghms4l5s00s6z7e48t6s",
+      "network": "Terra",
+      "withdrawal_fee": 0.2,
+      "withdrawal_min": 1,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "terra188gwmnvl8zv4n5639hghms4l5s00s6z7e48t6s",
+      "network": "Terra",
+      "withdrawal_fee": 0.2,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "MAGIC/USDT",
+    "base": "MAGIC",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "Arbitrum One",
+      "withdrawal_fee": 0.5,
+      "withdrawal_min": 1,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "Arbitrum One",
+      "withdrawal_fee": 0.5,
+      "withdrawal_min": 0.5,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "MANTA/USDT",
+    "base": "MANTA",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "Manta Pacific Mainnet",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.02,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "Manta Pacific Mainnet",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.01,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "MBOX/USDT",
+    "base": "MBOX",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "BSC",
+      "withdrawal_fee": 0.5,
+      "withdrawal_min": 1,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "BSC",
+      "withdrawal_fee": 0.5,
+      "withdrawal_min": 0.5,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "MINA/USDT",
+    "base": "MINA",
+    "quote": "USDT",
+    "binance": {
+      "address": "B62qnEPLBPPnRi71NyExqDM9Et9rrvK4bB2GapNhhgM9DvgGipKLNEW",
+      "network": "MINA",
+      "withdrawal_fee": 0.02,
+      "withdrawal_min": 0.04,
+      "deposit_min": 0.00005
+    },
+    "bybit": {
+      "address": "B62qnEPLBPPnRi71NyExqDM9Et9rrvK4bB2GapNhhgM9DvgGipKLNEW",
+      "network": "MINA",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.01,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "NEAR/USDT",
+    "base": "NEAR",
+    "quote": "USDT",
+    "binance": {
+      "address": "7e156143ead7675a8e85234ca5f3d3358b7edd2ae0948bc41106aab78af508ef",
+      "network": "NEAR",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.02,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "7e156143ead7675a8e85234ca5f3d3358b7edd2ae0948bc41106aab78af508ef",
+      "network": "NEAR",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.01,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "NOT/USDT",
+    "base": "NOT",
+    "quote": "USDT",
+    "binance": {
+      "address": "UQCT1S9xDKxJV7zpOYNpnof-_xym-dG7W3TYxeGLxLKSSSvB",
+      "network": "TON",
+      "withdrawal_fee": 0.3,
+      "withdrawal_min": 0.3,
+      "deposit_min": 0
+    },
+    "bybit": {
+      "address": "UQCT1S9xDKxJV7zpOYNpnof-_xym-dG7W3TYxeGLxLKSSSvB",
+      "network": "TON",
+      "withdrawal_fee": 0.3,
+      "withdrawal_min": 0.3,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "ONE/USDT",
+    "base": "ONE",
+    "quote": "USDT",
+    "binance": {
+      "address": "one1xqeje970edyrw5j6t2vykcs45cse663ml3pwe3",
+      "network": "ONE",
+      "withdrawal_fee": 0.2,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "one1xqeje970edyrw5j6t2vykcs45cse663ml3pwe3",
+      "network": "ONE",
+      "withdrawal_fee": 0.2,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+
+  {
+    "pair": "OP/USDT",
+    "base": "OP",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "OP Mainnet",
+      "withdrawal_fee": 0.1,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "OP Mainnet",
+      "withdrawal_fee": 0.1,
+      "withdrawal_min": 0.1,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "PSG/USDT",
+    "base": "PSG",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "BSC",
+      "withdrawal_fee": 0.05,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "BSC",
+      "withdrawal_fee": 0.05,
+      "withdrawal_min": 0.05,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "PYTH/USDT",
+    "base": "PYTH",
+    "quote": "USDT",
+    "binance": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 2,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 1,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "RDNT/USDT",
+    "base": "RDNT",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "Arbitrum One",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 2,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "Arbitrum One",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 1,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "ROSE/USDT",
+    "base": "ROSE",
+    "quote": "USDT",
+    "binance": {
+      "address": "rose1u9v2v6w437w7d2na4w4qm6t9w7yzn0hy2l8q4x",
+      "network": "Oasis",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 2,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "rose1u9v2v6w437w7d2na4w4qm6t9w7yzn0hy2l8q4x",
+      "network": "Oasis",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 1,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "SCRT/USDT",
+    "base": "SCRT",
+    "quote": "USDT",
+    "binance": {
+      "address": "secret1g4d9f6k4z0n9gx7t4z3u7e7m3a4c8l4yc8c9vj",
+      "network": "Secret",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.02,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "secret1g4d9f6k4z0n9gx7t4z3u7e7m3a4c8l4yc8c9vj",
+      "network": "Secret",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.01,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "SEI/USDT",
+    "base": "SEI",
+    "quote": "USDT",
+    "binance": {
+      "address": "sei1p6k4q8c6g36w7z0n9gx7t4z3u7e7m3a4c8l4yc8",
+      "network": "SEI",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.02,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "sei1p6k4q8c6g36w7z0n9gx7t4z3u7e7m3a4c8l4yc8",
+      "network": "SEI",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.01,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "SHIB/USDT",
+    "base": "SHIB",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "BSC",
+      "withdrawal_fee": 2000000,
+      "withdrawal_min": 4000000,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "BSC",
+      "withdrawal_fee": 2000000,
+      "withdrawal_min": 2000000,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "SIGN/USDT",
+    "base": "SIGN",
+    "quote": "USDT",
+    "binance": {
+      "address": "UQCT1S9xDKxJV7zpOYNpnof-_xym-dG7W3TYxeGLxLKSSSvB",
+      "network": "TON",
+      "withdrawal_fee": 0.3,
+      "withdrawal_min": 0.3,
+      "deposit_min": 0
+    },
+    "bybit": {
+      "address": "UQCT1S9xDKxJV7zpOYNpnof-_xym-dG7W3TYxeGLxLKSSSvB",
+      "network": "TON",
+      "withdrawal_fee": 0.3,
+      "withdrawal_min": 0.3,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "STX/USDT",
+    "base": "STX",
+    "quote": "USDT",
+    "binance": {
+      "address": "SP3K8Z0E6H43N2VZ2YB6A7A5JY8X3N3N8M9TD8K4F",
+      "network": "Stacks",
+      "withdrawal_fee": 0.1,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "SP3K8Z0E6H43N2VZ2YB6A7A5JY8X3N3N8M9TD8K4F",
+      "network": "Stacks",
+      "withdrawal_fee": 0.1,
+      "withdrawal_min": 0.1,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "SUI/USDT",
+    "base": "SUI",
+    "quote": "USDT",
+    "binance": {
+      "address": "0x17cbbf04d589fda59d51ffde92501894fa643de3be3e447f7cabeca7aa90082c",
+      "network": "SUI",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 1,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "0x17cbbf04d589fda59d51ffde92501894fa643de3be3e447f7cabeca7aa90082c",
+      "network": "SUI",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 1,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "TIA/USDT",
+    "base": "TIA",
+    "quote": "USDT",
+    "binance": {
+      "address": "celestia1h4q4j8j3y6n9gx7t4z3u7e7m3a4c8l4yc8c9vj",
+      "network": "Celestia",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.02,
+      "deposit_min": 0.001
+    },
+    "bybit": {
+      "address": "celestia1h4q4j8j3y6n9gx7t4z3u7e7m3a4c8l4yc8c9vj",
+      "network": "Celestia",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.01,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "TNSR/USDT",
+    "base": "TNSR",
+    "quote": "USDT",
+    "binance": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 0.1,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0.0001
+    },
+    "bybit": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 0.2,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "TON/USDT",
+    "base": "TON",
+    "quote": "USDT",
+    "binance": {
+      "address": "UQCT1S9xDKxJV7zpOYNpnof-_xym-dG7W3TYxeGLxLKSSSvB",
+      "network": "TON",
+      "withdrawal_fee": 0.3,
+      "withdrawal_min": 0.3,
+      "deposit_min": 0
+    },
+    "bybit": {
+      "address": "UQCT1S9xDKxJV7zpOYNpnof-_xym-dG7W3TYxeGLxLKSSSvB",
+      "network": "TON",
+      "withdrawal_fee": 0.3,
+      "withdrawal_min": 0.3,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "TRUMP/USDT",
+    "base": "TRUMP",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "BSC",
+      "withdrawal_fee": 1.5,
+      "withdrawal_min": 1.5,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "BSC",
+      "withdrawal_fee": 1.5,
+      "withdrawal_min": 1.5,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "TRX/USDT",
+    "base": "TRX",
+    "quote": "USDT",
+    "binance": {
+      "address": "TQ7DuEjJXQ6gHzXfWnA3SA8k6nJk8jWZKQ",
+      "network": "TRON",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 2,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "TQ7DuEjJXQ6gHzXfWnA3SA8k6nJk8jWZKQ",
+      "network": "TRON",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 1,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+
+  {
+    "pair": "WAXP/USDT",
+    "base": "WAXP",
+    "quote": "USDT",
+    "binance": {
+      "address": "wax1k2v4m4rzk5ljh37u2f454p4w3ffj4qk8p3rkxf",
+      "network": "WAX",
+      "withdrawal_fee": 2,
+      "withdrawal_min": 4,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "wax1k2v4m4rzk5ljh37u2f454p4w3ffj4qk8p3rkxf",
+      "network": "WAX",
+      "withdrawal_fee": 2,
+      "withdrawal_min": 2,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "WCT/USDT",
+    "base": "WCT",
+    "quote": "USDT",
+    "binance": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 0.1,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0.0001
+    },
+    "bybit": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 0.2,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "WIF/USDT",
+    "base": "WIF",
+    "quote": "USDT",
+    "binance": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 55,
+      "withdrawal_min": 110,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "3j8DNJSqBz5wzPTmhhLkfCNRvSJ5bqdRC8zGrSHLXMX8",
+      "network": "Solana",
+      "withdrawal_fee": 50,
+      "withdrawal_min": 50,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "WLD/USDT",
+    "base": "WLD",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "Ethereum",
+      "withdrawal_fee": 0.23,
+      "withdrawal_min": 0.46,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "Ethereum",
+      "withdrawal_fee": 0.2,
+      "withdrawal_min": 0.2,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "XAI/USDT",
+    "base": "XAI",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "Arbitrum One",
+      "withdrawal_fee": 0.7,
+      "withdrawal_min": 1.4,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "Arbitrum One",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 1,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "XLM/USDT",
+    "base": "XLM",
+    "quote": "USDT",
+    "binance": {
+      "address": "GC3ZP2U7WJ2JK3MNHVZ4V8UIG4N2PJS4C42R7V7C6H5D2A5WA7HD6WJR",
+      "network": "Stellar",
+      "memo": "3574998388",
+      "withdrawal_fee": 0.02,
+      "withdrawal_min": 0.1,
+      "deposit_min": 0.0001
+    },
+    "bybit": {
+      "address": "GC3ZP2U7WJ2JK3MNHVZ4V8UIG4N2PJS4C42R7V7C6H5D2A5WA7HD6WJR",
+      "network": "Stellar",
+      "memo": "3574998388",
+      "withdrawal_fee": 0.01,
+      "withdrawal_min": 0.01,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "ZIL/USDT",
+    "base": "ZIL",
+    "quote": "USDT",
+    "binance": {
+      "address": "zil1hkycgdsq0zj0gkc7hlzm7s9y2q2n6g4z9v6xdh",
+      "network": "Zilliqa",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 2,
+      "deposit_min": 0.01
+    },
+    "bybit": {
+      "address": "zil1hkycgdsq0zj0gkc7hlzm7s9y2q2n6g4z9v6xdh",
+      "network": "Zilliqa",
+      "withdrawal_fee": 1,
+      "withdrawal_min": 1,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  },
+  {
+    "pair": "ZRO/USDT",
+    "base": "ZRO",
+    "quote": "USDT",
+    "binance": {
+      "address": "0xe5b10a8fa449155d5b4b657dab4e856815d52bd7",
+      "network": "ARBITRUM",
+      "withdrawal_fee": 0.04,
+      "withdrawal_min": 0.08,
+      "deposit_min": 0.00026
+    },
+    "bybit": {
+      "address": "0x4231d188a91481a8c3d39d444b7451436babee94",
+      "network": "AVAXC",
+      "withdrawal_fee": 0.1,
+      "withdrawal_min": 0.1,
+      "deposit_min": 0
+    },
+    "trading_fee": 0.001,
+    "min_trade": 10,
+    "max_trade": 20,
+    "min_spread": 0.002,
+    "max_slippage": 0.001
+  }
+]
